@@ -9,15 +9,15 @@ import java.util.stream.Stream;
 
 public class Reader {
 
-    public Stream<String> getStringStreamFromFile(String path) throws IOException {
-        return Files.lines(Paths.get(path));
-    }
+  public Stream<String> getStringStreamFromFile(String path) throws IOException {
+    return Files.lines(Paths.get(path));
+  }
 
-    public List<Integer> getIntListFromFile(String path) throws IOException {
-        return getStringStreamFromFile(path).map(Integer::parseInt).collect(Collectors.toList());
-    }
+  public List<Integer> getIntListFromFile(String path) throws IOException {
+    return getStringStreamFromFile(path).map(Integer::parseInt).collect(Collectors.toList());
+  }
 
-    public List<String> getStringListFromFile(String path) throws IOException {
-        return Files.readAllLines(Paths.get(path));
-    }
+  public List<String> getStringListFromFile(String path) throws IOException {
+    return Files.readAllLines(Paths.get(path));
+  }
 }
